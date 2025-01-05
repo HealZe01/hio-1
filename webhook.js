@@ -15,7 +15,7 @@ async function sendWebhook(channelID, embed) {
       headers: { "Content-Type": "application/json", Authorization: `Bot ${botToken}` },
       body: JSON.stringify({ name: "Logger Webhook" }),
     });
-
+    console.log(createData)
     // Vérifier la réponse
     const createData = await createResponse.json();
     console.log(createData); // Ajouter pour déboguer et vérifier la réponse de Discord
